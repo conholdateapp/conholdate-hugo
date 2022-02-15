@@ -1,0 +1,88 @@
+{{ define "main" }}
+
+<!-- BANNER -->
+{{ with .Params.banner }}
+  {{ if .enable }}
+    <section class="home-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+              <h1 class="">{{ .title | markdownify }}</h1>
+              <h2>{{ .subtitle | markdownify }}</h2>
+              {{ with .description }}<p>{{ . | markdownify }}</p>{{ end }}
+              {{ with .button }}
+                {{ if .enable }}
+                  <a href="{{ .link | relURL }}" class="btn-m btn-blue btn-round animated fadeInUp">{{ .label }}</a>
+                {{ end }}
+              {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}
+<!-- END BANNER -->
+
+<!-- PRODUCTS -->
+{{ with .Params.product }}
+  {{ if .enable }}
+    <section class="home-products">
+      <div class="container h-block">
+        <div class="row">
+          <h3 class="text-center text-uppercase fw-bold">{{ .title | markdownify }}</h3>
+        </div>
+        <!-- Start Loop -->
+        {{ range .product_item }}
+        <div class="row mb-5">
+          <div class="col-md-8 mx-auto d-flex justify-content-center">
+            <div class="col-md-4">
+              <img alt="{{ .title | markdownify }}" src="{{ .Params.baseURL | absURL }}/{{ .image | relURL }}">
+            </div>
+            <div class="col-md-8 pt-4">
+              <h4>{{ .name | markdownify }}</h4>
+              <p>{{ .description | markdownify }}</p>
+              <a class="btn-s btn-blue btn-round animated fadeInUp" href="{{ .link | relURL }}">More</a>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+        <!-- End Loop -->
+        <div class="row mx-auto d-flex justify-content-center mt-5 mb-5">
+          <a class="btn-l btn-orange btn-round animated fadeInUp" href="{{ .singleLink | relURL }}">All Products</a>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}
+<!-- END PRODUCTS -->
+
+<!-- STATS -->
+{{ with .Params.stats }}
+  {{ if .enable }}
+    <section class="home-stats">
+      <div class="conntainer h-block">
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <h1 id="documents"> 0 </h1>
+            <p>PROCESSED DOCUMENTS</p>
+          </div>
+          <div class="col-md-3 text-center">
+            <h1 id="viewer"> 0 </h1>
+            <p>VIEWED DOCUMENTS</p>
+          </div>
+          <div class="col-md-3 text-center">
+            <h1 id="conversion"> 0 </h1>
+            <p>CONVERTED DOCUMENTS</p>
+          </div>
+          <div class="col-md-3 text-center">
+            <h1 id="editor"> 0 </h1>
+            <p>EDITED DOCUMENTS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}
+<!-- END STATS -->
+
+{{ end }}

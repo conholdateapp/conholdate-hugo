@@ -1,0 +1,18 @@
+# theme.toml for the Conholdate Hugo theme
+name = "Conholdate Hugo"
+license = "MIT"
+licenselink = "https://github.com/conholdateapp/landings/blob/main/LICENSE"
+description = "Hugo Conholdate App template"
+homepage = "https://github.com/conholdateapp/landings"
+tags = ["modern", "multilingual", "bootstrap", "responsive"]
+features = ["responsive", "seo-friendly"]
+min_version = "0.64.0"
+
+[author]
+  name = "Conholdate"
+  homepage = "https://www.conholdate.app/"
+
+[original]
+  name = "Conholdate Apps"
+  homepage = "https://www.conholdate.app/"
+  repo = "https://github.com/conholdateapp/landings"

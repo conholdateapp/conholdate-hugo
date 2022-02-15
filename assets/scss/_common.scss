@@ -1,0 +1,187 @@
+body, html {
+  overflow-x: hidden;
+  color: $secondary-color;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+iframe {
+  border: 0;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+  color: $primary-color;
+}
+
+blockquote {
+  font-size: 18px;
+  border-color: $primary-color;
+  padding: 20px 40px;
+  text-align: left;
+  color: #777;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
+  box-shadow: none;
+  height: 45px;
+  outline: none;
+  font-size: 14px;
+
+  &:focus {
+    box-shadow: none;
+    border: 1px solid $primary-color;
+  }
+}
+
+////////////////////////////
+// Button Style
+///////////////////////////
+
+.btn {
+  display: inline-block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  @include transition (all, 0.2s, ease);
+}
+
+.btn-blue {
+  @extend .btn;
+  background: $blue;
+  color: $white;
+
+  &:hover {
+    background: darken($blue, 20%);
+    color: $white;
+  }
+}
+
+.btn-green {
+  @extend .btn;
+  background: $green;
+  color: $white;
+
+  &:hover {
+    background: darken($green, 20%);
+    color: $white;
+  }
+}
+
+.btn-orange {
+  @extend .btn;
+  background: $orange;
+  color: $white;
+
+  &:hover {
+    background: darken($orange, 20%);
+    color: $white;
+  }
+}
+
+// .btn-solid-border {
+//   border: 1px solid $primary-color;
+//   background: transparent;
+//   color: $primary-color;
+
+//   &:hover {
+//     background: $primary-color;
+//     color: $color-white;
+
+//     span {
+//       color: $color-white;
+//     }
+//   }
+// }
+
+// .btn-transparent {
+//   @extend .btn-main;
+//   background: transparent;
+//   padding: 0;
+//   color: $primary-color;
+
+//   &:hover {
+//     background: transparent;
+//     color: $primary-color;
+//   }
+// }
+
+.btn-l {
+  width: 250px;
+  padding: 16px;
+  font-size: 15px;
+
+  // &.btn-icon {
+  //   i {
+  //     font-size: 16px;
+  //     vertical-align: middle;
+  //     margin-right: 5px;
+  //   }
+  // }
+}
+
+.btn-m {
+  width: 190px;
+  padding: 12px;
+  font-size: 13px;
+
+  // &.btn-icon {
+  //   i {
+  //     font-size: 16px;
+  //     vertical-align: middle;
+  //     margin-right: 5px;
+  //   }
+  // }
+}
+
+.btn-s {
+  width: 130px;
+  padding: 8px;
+  font-size: 11px;
+}
+
+.btn-round {
+  border-radius: 4px;
+}
+
+.btn-round-full {
+  border-radius: 50px;
+}
+
+// .btn.active:focus,
+// .btn:active:focus,
+// .btn:focus {
+//   outline: 0;
+// }
+
+// .btn:focus {
+//   color: #ddd;
+// }
+
+.header-container {
+  width: 100%;
+  height: 60px;
+  background-color: $black;
+  position: absolute;
+  top: 0;
+}
+
+.h-block {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
