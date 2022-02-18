@@ -184,6 +184,10 @@ input[type="tel"] {
 .h-block {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  h3 {
+    padding-bottom: 30px;
+  }
 }
 
 .features-banner {
@@ -207,12 +211,5 @@ input[type="tel"] {
       h2 {
           color: $gray-1;
       }
-  }
-}
-
-.features-started {
-  .h-block {
-    padding-top: 0;
-    margin-top: -30px;
   }
 }

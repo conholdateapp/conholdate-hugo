@@ -27,14 +27,14 @@
           {{ range .feature }}
             <div class="col-md-6 d-flex justify-content-center text-start mt-5 pt-5">
               <div class="col-md-4 pe-4">
-                <img alt="{{ .image_alt | markdownify }}" src="{{ .image | relURL }}">
+                <img alt="{{ .imageAlt | markdownify }}" src="{{ .image | relURL }}">
               </div>
               <div class="col-md-6">
                 <h4>{{ .title | markdownify }}</h4>
                 <p>{{ .description | markdownify }}</p>
                 {{ with .button }}
                   {{ if .enable }}
-                    <a class="btn-s btn-blue btn-round animated fadeInUp" href="{{ .link | relURL }}">{{ .link_text | markdownify }}</a>
+                    <a class="btn-s btn-blue btn-round animated fadeInUp" href="{{ .link | relURL }}">{{ .label | markdownify }}</a>
                   {{ end }}
                 {{ end }}
               </div>

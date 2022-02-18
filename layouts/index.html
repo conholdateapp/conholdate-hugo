@@ -14,12 +14,12 @@
         </div>
         <!-- Start Loop -->
         {{ range .product }}
-        <div class="row mb-5">
+        <div class="row pb-5 pt-5">
           <div class="col-md-8 mx-auto d-flex justify-content-center">
-            <div class="col-md-4">
+            <div class="col-md-4 text-end">
               <img alt="{{ .title | markdownify }}" src="{{ .Params.baseURL | absURL }}/{{ .image | relURL }}">
             </div>
-            <div class="col-md-8 pt-4">
+            <div class="col-md-8 pt-4 ps-5">
               <h4>{{ .title | markdownify }}</h4>
               <p>{{ .description | markdownify }}</p>
               <a class="btn-s btn-blue btn-round animated fadeInUp" href="{{ .link | relURL }}">{{ .linkText | markdownify }}</a>
@@ -28,7 +28,7 @@
         </div>
         {{ end }}
         <!-- End Loop -->
-        <div class="row mx-auto d-flex justify-content-center mt-5 mb-5">
+        <div class="row mx-auto d-flex justify-content-center mt-5 pt-5">
           <a class="btn-l btn-orange btn-round animated fadeInUp" href="{{ .singleLink | relURL }}">{{ .singleLinkText | markdownify }}</a>
         </div>
       </div>
