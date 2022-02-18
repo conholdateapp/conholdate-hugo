@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+<!-- BANNER -->
+{{- partial "banner.html" . -}}
+<!-- END BANNER -->
+
+{{ with .Params.overview }}
+  {{ if .enable }}
+    <section class="features-overview">
+      <div class="container h-block">
+        <div class="row mx-auto d-flex justify-content-center text-center">
+          <div class="col-md-10">
+            <h3 class="text-center text-uppercase fw-bold">{{ .title | markdownify }}</h3>
+            <p>{{ .description | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}
+
+{{ with .Params.features }}
+  {{ if .enable }}
+    <section class="features-started">
+      <div class="container h-block">
+        <div class="row">
+          {{ range .feature }}
+            <div class="col-md-6 d-flex justify-content-center text-start mt-5 pt-5">
+              <div class="col-md-4 pe-4">
+                <img alt="{{ .image_alt | markdownify }}" src="{{ .image | relURL }}">
+              </div>
+              <div class="col-md-6">
+                <h4>{{ .title | markdownify }}</h4>
+                <p>{{ .description | markdownify }}</p>
+                {{ with .button }}
+                  {{ if .enable }}
+                    <a class="btn-s btn-blue btn-round animated fadeInUp" href="{{ .link | relURL }}">{{ .link_text | markdownify }}</a>
+                  {{ end }}
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+  {{ end }}
+{{ end }}
+
+{{ end }}

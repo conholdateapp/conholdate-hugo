@@ -185,3 +185,34 @@ input[type="tel"] {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.features-banner {
+  background: $blue-gradient;
+
+  .container{
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      height: 300px;
+
+      .row {
+          text-align: center;
+          margin: auto;
+      }
+
+      h1 {
+          color: $white;
+      }
+
+      h2 {
+          color: $gray-1;
+      }
+  }
+}
+
+.features-started {
+  .h-block {
+    padding-top: 0;
+    margin-top: -30px;
+  }
+}
